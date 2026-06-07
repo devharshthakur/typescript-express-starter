@@ -3,18 +3,20 @@
  * @module routes/greet
  */
 
-import type { Router } from "express";
+import { Router } from "express";
 import { greet } from "#services/greeter.js";
 
-export function mountGreet(router: Router) {
-  router.get("/greet", (req, res) => {
-    const name = req.query.name;
+const router = Router();
 
-    if (typeof name !== "string" || name.trim().length === 0) {
-      res.status(400).json({ error: "Query parameter 'name' is required" });
-      return;
-    }
+router.get("/greet", (req, res) => {
+  const name = req.query.name;
 
-    res.json(greet(name));
-  });
-}
+  if (typeof name !== "string" || name.trim().length === 0) {
+    res.status(400).json({ error: "Query parameter 'name' is required" });
+    return;
+  }
+
+  res.json(greet(name));
+});
+
+export default router;
