@@ -6,7 +6,6 @@ import greetRouter from "#routes/greet.js";
 const router = Router();
 
 router.use(requestLogger);
-
 router.use(healthRouter);
 router.use(greetRouter);
 
