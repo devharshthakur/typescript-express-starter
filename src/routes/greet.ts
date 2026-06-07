@@ -3,23 +3,18 @@
  * @module routes/greet
  */
 
-import { Router } from "express";
-import { requestLogger } from "#middleware/request-logger.js";
+import type { Router } from "express";
 import { greet } from "#services/greeter.js";
 
-const router = Router();
+export function mountGreet(router: Router) {
+  router.get("/greet", (req, res) => {
+    const name = req.query.name;
 
-router.use(requestLogger);
+    if (typeof name !== "string" || name.trim().length === 0) {
+      res.status(400).json({ error: "Query parameter 'name' is required" });
+      return;
+    }
 
-router.get("/greet", (req, res) => {
-  const name = req.query.name;
-
-  if (typeof name !== "string" || name.trim().length === 0) {
-    res.status(400).json({ error: "Query parameter 'name' is required" });
-    return;
-  }
-
-  res.json(greet(name));
-});
-
-export default router;
+    res.json(greet(name));
+  });
+}
