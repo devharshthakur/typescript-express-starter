@@ -4,8 +4,8 @@
   "version": "1.2.0",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
-    "start": "tsc && tsc-alias && tsc-alias && node build/main.js",
-    "build": "tsc && tsc-alias",
+    "start": "rm -rf build && tsc && tsc-alias && tsc-alias && node build/main.js",
+    "build": "rm -rf build && tsc && tsc-alias",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",
