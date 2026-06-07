@@ -10,7 +10,13 @@
     "rootDir": "src",
     "resolveJsonModule": true,
     "types": ["node"],
-    "paths": {}
+    "paths": {
+      "#lib/*": ["./src/lib/*"],
+      "#middleware/*": ["./src/lib/middleware/*"],
+      "#services/*": ["./src/lib/services/*"],
+      "#routes/*": ["./src/routes/*"],
+      "#/*": ["./src/*"]
+    }
   },
   "include": ["src"]
 }
