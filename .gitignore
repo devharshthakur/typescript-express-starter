@@ -1,0 +1,22 @@
+node_modules
+build   
+dist
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
