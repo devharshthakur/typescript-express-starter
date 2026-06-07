@@ -11,6 +11,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check": "tsc --noEmit && eslint . && prettier --check .",
+    "docker:build": "docker compose build",
+    "docker:up": "docker compose up --build",
+    "docker:start": "docker compose up --build -d",
+    "docker:down": "docker compose down",
     "prepare": "husky"
   },
   "dependencies": {
