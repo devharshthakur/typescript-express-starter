@@ -1,3 +1,8 @@
+/**
+ * Development script — runs the server (nodemon) and type-checker (tsc --noEmit --watch)
+ * concurrently for local development.
+ */
+
 import concurrently from "concurrently";
 import type { ConcurrentlyCommandInput, ConcurrentlyOptions } from "concurrently";
 
