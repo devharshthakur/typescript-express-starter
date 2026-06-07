@@ -1,3 +1,8 @@
+/**
+ * Environment configuration module.
+ * Loads .env via dotenv, validates against a zod schema, and exits early on invalid values.
+ * @module config
+ */
 import "dotenv/config";
 import { z } from "zod";
 

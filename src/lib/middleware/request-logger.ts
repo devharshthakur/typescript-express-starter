@@ -1,0 +1,11 @@
+/**
+ * Request logger middleware — logs method, URL, and timestamp for each request.
+ * @module middleware/request-logger
+ */
+
+import type { Request, Response, NextFunction } from "express";
+
+export function requestLogger(req: Request, _res: Response, next: NextFunction) {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+}
