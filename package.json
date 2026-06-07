@@ -1,7 +1,7 @@
 {
   "name": "express-starter",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
     "start": "tsc && tsc-alias && tsc-alias && node build/main.js",
