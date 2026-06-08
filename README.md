@@ -1,39 +1,41 @@
 # TypeScript Express Starter
 
-Small Express 5 starter for building TypeScript APIs with fast local feedback and sensible defaults.
+An Express 5 starter template using typescript with prebuilt defaults and configurations. It is exensable to any extent. 
 
 ## What's included
 
-- Express 5 with ESM and TypeScript
-- Environment validation with `dotenv` + `zod`
-- Health check route at `GET /health`
-- Development server with restart-on-change and type-check watch
-- ESLint, Prettier, Husky, and lint-staged
+- Latest version of Express
+- Environment Variables are validated runtime, server is stoped if any of the required Environment variables is absent
+- Development server with HMR (Using Nodemon pre configured) and type checking (using `tsc`) both concurrently
+- Linting , formatting, precommit hooks all setup and extensable.
 
 ## Requirements
 
-- Latest LTS Node.js version from `.node-version` / `.nvmrc`.
-- pnpm as node package manager
+- Latest LTS Node.js version as noted in `.node-version` / `.nvmrc`.
+- pnpm is used as node package manager here
 
 ## Setup
+1. Copy the `.env.sample` file to a `.env` file
+
+```bash
+cp .env.example .env
+```
+
+2. Install dependencies using `pnpm` from root
 
 ```bash
 pnpm install
-cp .env.example .env
-pnpm dev
 ```
-
+>[!IMPORTANT]
 Server by default starts on `PORT` 8000 unless `PORT` env var is changed.
 You can access the server on : `http://localhost:8000`
 
-## Environment
+## Environment Variabels
 
 | Variable   | Default       | Notes                                          |
 | ---------- | ------------- | ---------------------------------------------- |
 | `PORT`     | `8000`        | Port the server listens on                     |
 | `NODE_ENV` | `development` | Must be `development`, `production`, or `test` |
-
-Invalid environment values fail fast during startup. See `src/config.ts` for the zod schema.
 
 ## Scripts
 
