@@ -15,11 +15,11 @@
     "jsx": "react-jsx",
     "types": ["node"],
     "paths": {
-      "#lib/*": ["./src/lib/*"],
-      "#middleware/*": ["./src/lib/middlewares/*"],
-      "#services/*": ["./src/lib/services/*"],
-      "#routes/*": ["./src/routes/*"],
-      "#/*": ["./src/*"]
+      "$lib/*": ["./src/lib/*"],
+      "$middleware/*": ["./src/middlewares/*"],
+      "$services/*": ["./src/services/*"],
+      "$routes/*": ["./src/routes/*"],
+      "$/*": ["./src/*"]
     }
   },
   "include": ["src"]
