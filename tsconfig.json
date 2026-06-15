@@ -6,11 +6,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "build",
-    "rootDir": "src",
+    "rootDir": ".",
     "resolveJsonModule": true,
     "allowJs": true,
     "checkJs": true,
+    "noEmit": true,
     "alwaysStrict": true,
     "jsx": "react-jsx",
     "types": ["node"],
@@ -21,6 +21,5 @@
       "$routes/*": ["./src/routes/*"],
       "$/*": ["./src/*"]
     }
-  },
-  "include": ["src"]
+  }
 }
