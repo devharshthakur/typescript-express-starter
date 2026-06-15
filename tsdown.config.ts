@@ -12,7 +12,7 @@ export default defineConfig({
     resolve: {
       alias: {
         $lib: "./src/lib",
-        $middleware: "./src/middlewares",
+        $middlewares: "./src/middlewares",
         $services: "./src/services",
         $routes: "./src/routes",
         $: "./src",

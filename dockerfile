@@ -26,4 +26,4 @@ COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/build /app/build
 ENV NODE_ENV=production
 EXPOSE 8000
-CMD ["node", "build/main.js"]
+CMD ["node", "build/main.mjs"]
