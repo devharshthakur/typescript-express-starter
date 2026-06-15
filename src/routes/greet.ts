@@ -4,7 +4,7 @@
  */
 
 import { Router } from "express";
-import { greet } from "#services/greeter.js";
+import { greet } from "$services/greeter.js";
 
 const router = Router();
 
