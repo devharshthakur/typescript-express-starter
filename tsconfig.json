@@ -8,15 +8,12 @@
     "skipLibCheck": true,
     "rootDir": ".",
     "resolveJsonModule": true,
-    "allowJs": true,
-    "checkJs": true,
     "noEmit": true,
     "alwaysStrict": true,
-    "jsx": "react-jsx",
     "types": ["node"],
     "paths": {
       "$lib/*": ["./src/lib/*"],
-      "$middleware/*": ["./src/middlewares/*"],
+      "$middlewares/*": ["./src/middlewares/*"],
       "$services/*": ["./src/services/*"],
       "$routes/*": ["./src/routes/*"],
       "$/*": ["./src/*"]
