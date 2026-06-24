@@ -8,7 +8,7 @@ import { z } from "zod";
 import { greet } from "$services/greeter.js";
 
 const querySchema = z.object({
-  name: z.string().min(1, "Query parameter 'name' is required"),
+  name: z.string().trim().min(1, "Query parameter 'name' is required"),
 });
 
 const router = Router();
