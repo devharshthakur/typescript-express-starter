@@ -4,7 +4,7 @@
   "version": "1.2.0",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
-    "start": "pnpm run build && node build/main.js",
+    "start": "tsdown && node build/main.js",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -16,7 +16,10 @@
     "docker:start": "docker compose up --build -d",
     "docker:down": "docker compose down",
     "prepare": "husky",
-    "deps:update": "bash scripts/update.sh"
+    "deps:update": "tsx scripts/update.ts",
+    "changelog": "changelogen",
+    "changelog:bump": "changelogen --bump",
+    "changelog:release": "changelogen --release"
   },
   "engines": {
     "node": ">=22.18.0"
@@ -41,6 +44,7 @@
     "tsdown": "^0.22.2",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.0"
+    "typescript-eslint": "^8.61.0",
+    "changelogen": "^0.6.1"
   }
 }
