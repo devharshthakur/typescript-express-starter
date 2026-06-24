@@ -1,0 +1,30 @@
+types:
+  feat:
+    title: "🚀 Features"
+    semver: minor
+  fix:
+    title: "🩹 Fixes"
+    semver: patch
+  perf:
+    title: "🔥 Performance"
+    semver: patch
+  refactor:
+    title: "💅 Refactors"
+    semver: patch
+  docs:
+    title: "📖 Documentation"
+    semver: patch
+  chore:
+    title: "🏡 Chore"
+  test:
+    title: "✅ Tests"
+  ci:
+    title: "🤖 CI"
+  build:
+    title: "📦 Build"
+    semver: patch
+
+repo: "devharshthakur/typescript-express-starter"
+output: CHANGELOG.md
+excludeAuthors:
+  - dependabot
