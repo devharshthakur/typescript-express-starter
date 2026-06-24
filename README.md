@@ -1,6 +1,6 @@
 # TypeScript Express Starter
 
-An Express 5 starter template using typescript with prebuilt defaults and configurations. It is exensable to any extent. 
+An Express 5 starter template using typescript with prebuilt defaults and configurations. It is exensable to any extent.
 
 ## What's included
 
@@ -15,6 +15,7 @@ An Express 5 starter template using typescript with prebuilt defaults and config
 - pnpm is used as node package manager here
 
 ## Setup
+
 1. Copy the `.env.sample` file to a `.env` file
 
 ```bash
@@ -26,9 +27,10 @@ cp .env.example .env
 ```bash
 pnpm install
 ```
->[!IMPORTANT]
-Server by default starts on `PORT` 8000 unless `PORT` env var is changed.
-You can access the server on : `http://localhost:8000`
+
+> [!IMPORTANT]
+> Server by default starts on `PORT` 8000 unless `PORT` env var is changed.
+> You can access the server on : `http://localhost:8000`
 
 ## Environment Variabels
 
