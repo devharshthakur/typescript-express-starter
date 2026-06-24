@@ -2,6 +2,7 @@
 // setup.ts — Clean up template-repo management files for a fresh project start.
 // Run after scaffolding to remove files relevant only to template maintenance.
 
+import { execSync } from "node:child_process";
 import { rmSync, readFileSync, writeFileSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -92,6 +93,13 @@ function main(): void {
 
   const allRemoved = [...fsRemoved, ...pkgRemoved];
   printSummary(allRemoved, errors);
+
+  try {
+    console.log("\nSyncing lockfile...");
+    execSync("pnpm install", { stdio: "inherit", cwd: PROJECT_ROOT });
+  } catch {
+    console.warn("⚠️ Lockfile sync failed. Run 'pnpm install' manually.");
+  }
 }
 
 main();

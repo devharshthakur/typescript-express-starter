@@ -4,13 +4,13 @@
   "version": "1.2.0",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
-    "start": "tsdown && node build/main.js",
+    "start": "tsdown && node build/main.mjs",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "check": "tsc --noEmit && eslint . && prettier --check .",
+    "format": "prettier --experimental-cli --write .",
+    "format:check": "prettier --experimental-cli --check .",
+    "check": "tsc --noEmit && eslint . && prettier --experimental-cli --check .",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up --build",
     "docker:start": "docker compose up --build -d",
@@ -23,7 +23,7 @@
     "changelog:release": "changelogen --release"
   },
   "engines": {
-    "node": ">=22.18.0"
+    "node": ">=24"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
@@ -33,19 +33,19 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
+    "changelogen": "^0.6.2",
     "concurrently": "^10.0.3",
     "eslint": "^10.5.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.6.0",
+    "globals": "^17.7.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.7",
+    "lint-staged": "^17.0.8",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.4",
-    "tsdown": "^0.22.2",
+    "tsdown": "^0.22.3",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.61.0",
-    "changelogen": "^0.6.1"
+    "typescript-eslint": "^8.62.0"
   }
 }
