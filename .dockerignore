@@ -8,3 +8,5 @@ dist
 *.md
 *.log
 .eslintcache
+.github
+.husky
