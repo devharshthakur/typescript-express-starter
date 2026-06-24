@@ -4,13 +4,13 @@
   "version": "1.2.0",
   "scripts": {
     "dev": "tsx scripts/dev.ts",
-    "start": "tsdown && node build/main.js",
+    "start": "tsdown && node build/main.mjs",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "check": "tsc --noEmit && eslint . && prettier --check .",
+    "format": "prettier --experimental-cli --write .",
+    "format:check": "prettier --experimental-cli --check .",
+    "check": "tsc --noEmit && eslint . && prettier --experimental-cli --check .",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up --build",
     "docker:start": "docker compose up --build -d",
@@ -23,7 +23,7 @@
     "changelog:release": "changelogen --release"
   },
   "engines": {
-    "node": ">=22.18.0"
+    "node": ">=24"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
