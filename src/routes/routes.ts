@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requestLogger } from "$middleware/request-logger.js";
+import { requestLogger } from "$middlewares/requestLogger.js";
 import healthRouter from "$routes/health.js";
 import greetRouter from "$routes/greet.js";
 
