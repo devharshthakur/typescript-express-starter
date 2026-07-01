@@ -2,13 +2,13 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-TEMP_DIR="$ROOT/temp"
+TEMP_DIR="$ROOT/.temp"
 TARGET="$TEMP_DIR/typescript-express-starter"
 
 # 1. Copy project to temp dir
 rm -rf "$TEMP_DIR"
 mkdir -p "$TEMP_DIR"
-echo "📋 Creating temp copy in $TEMP_DIR ..."
+echo "📋 Creating .temp copy in $TEMP_DIR ..."
 cp -R "$ROOT" "$TARGET"
 
 # Strip heavy dirs to speed up copy
@@ -72,6 +72,16 @@ else
 fi
 
 cd "$ROOT"
+
+# 3e. Check scaffolding scripts are removed
+for f in setup.sh scripts/test-setup.sh; do
+  if [ -e "$TARGET/$f" ]; then
+    echo "  ❌ $f still exists"
+    ERRORS=$((ERRORS + 1))
+  else
+    echo "  ✅ $f removed"
+  fi
+done
 
 # 4. Report results
 echo ""
