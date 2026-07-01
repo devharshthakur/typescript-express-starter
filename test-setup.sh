@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+ROOT="$(cd "$(dirname "$0")" && pwd)"
 TEMP_DIR="$ROOT/.temp"
 TARGET="$TEMP_DIR/typescript-express-starter"
 
@@ -9,10 +9,13 @@ TARGET="$TEMP_DIR/typescript-express-starter"
 rm -rf "$TEMP_DIR"
 mkdir -p "$TEMP_DIR"
 echo "📋 Creating .temp copy in $TEMP_DIR ..."
-cp -R "$ROOT" "$TARGET"
-
-# Strip heavy dirs to speed up copy
-rm -rf "$TARGET/node_modules" "$TARGET/build" "$TARGET/coverage" "$TARGET/.git"
+rsync -a \
+  --exclude='.temp' \
+  --exclude='node_modules' \
+  --exclude='build' \
+  --exclude='coverage' \
+  --exclude='.git' \
+  "$ROOT/" "$TARGET/"
 
 # 2. Run setup on the temp copy
 echo "▶️  Running setup.sh..."
@@ -74,7 +77,7 @@ fi
 cd "$ROOT"
 
 # 3e. Check scaffolding scripts are removed
-for f in setup.sh scripts/test-setup.sh; do
+for f in setup.sh test-setup.sh; do
   if [ -e "$TARGET/$f" ]; then
     echo "  ❌ $f still exists"
     ERRORS=$((ERRORS + 1))
@@ -90,4 +93,5 @@ if [ $ERRORS -eq 0 ]; then
 else
   echo "❌ $ERRORS validation(s) failed."
 fi
+
 echo "📁 Temp copy left for inspection: $TARGET"
