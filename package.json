@@ -18,6 +18,7 @@
     "prepare": "husky",
     "setup": "tsx setup.ts",
     "deps:update": "tsx scripts/update.ts",
+    "test:setup": "bash scripts/test-setup.sh",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage"
