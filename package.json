@@ -16,8 +16,6 @@
     "docker:start": "docker compose up --build -d",
     "docker:down": "docker compose down",
     "prepare": "husky",
-    "setup": "tsx setup.ts",
-    "deps:update": "tsx scripts/update.ts",
     "test:setup": "bash test-setup.sh",
     "test": "vitest run",
     "test:watch": "vitest",
