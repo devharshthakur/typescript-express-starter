@@ -8,9 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.4.0] - 2026-07-01
 
 ### Added
+
 - Add self delete bash scripts by @devharshthakur
 
 ### Changed
+
 - Merge branch 'fixes' by @devharshthakur
 - Changes filetype to `.js` from `.mjs` by @devharshthakur
 - Created setup script test pipeline by @devharshthakur
@@ -21,28 +23,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update changelog for v1.3.2 by @github-actions[bot]
 
 ### Fixed
+
 - Test-setup pipeline by @devharshthakur
 
 ### Removed
+
 - Removed update script by @devharshthakur
 - Removed changelogen scripts by @devharshthakur
 
 ### New Contributors
-* @github-actions[bot] made their first contribution
+
+- @github-actions[bot] made their first contribution
 
 ## [1.3.2] - 2026-06-24
 
 ### Fixed
+
 - Updates the `changelog` file and commit it as well by @devharshthakur
 
 ## [1.3.1] - 2026-06-24
 
 ### Fixed
+
 - Using plain changelogen + --from/--to approach by @devharshthakur
 
 ## [1.3.0] - 2026-06-24
 
 ### Added
+
 - Add tests for starter code by @devharshthakur
 - Add config file by @devharshthakur
 - Add body parsers, error handler, and graceful shutdown by @devharshthakur
@@ -52,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add release workflow with git-cliff changelog generation by @devharshthakur
 
 ### Changed
+
 - Merge pull request #5 from devharshthakur/feat/tests by @devharshthakur in [#5](https://github.com/devharshthakur/typescript-express-starter/pull/5)
 - Install deps by @devharshthakur
 - Merge pull request #4 from devharshthakur/fixes by @devharshthakur in [#4](https://github.com/devharshthakur/typescript-express-starter/pull/4)
@@ -80,6 +89,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update `CHANGELOG.md` by @devharshthakur
 
 ### Fixed
+
 - Using latest pnpm setup action by @devharshthakur
 - Setup the coverage command by @devharshthakur
 - Use `zod` schema validation for query paramenter by @devharshthakur
@@ -91,14 +101,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed alias from `$middleware` to `$middlewares` by @devharshthakur
 
 ### Removed
+
 - Remove incorrect file-based ruleset attempt by @devharshthakur
 
 ## [1.2.0] - 2026-06-07
 
 ### Added
+
 - Add jsdoc comment by @devharshthakur
 
 ### Changed
+
 - `v1.2.0` by @devharshthakur
 - Docker setup by @devharshthakur
 - Rename folder `middleware` to `middlewares` by @devharshthakur
@@ -107,9 +120,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.1.0] - 2026-06-07
 
 ### Added
+
 - Add path aliases and tsc-alias for build-time resolution by @devharshthakur
 
 ### Changed
+
 - `v1.0.0` by @devharshthakur
 - Format by @devharshthakur
 - Plain routers in route files, mount centralized in routes.ts by @devharshthakur
@@ -121,9 +136,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2026-06-07
 
 ### Added
+
 - Add env validation using dotenv + zod by @devharshthakur
 
 ### Changed
+
 - Git-cliff config by @devharshthakur
 - Versioning the project by @devharshthakur
 - Rewrite README with full project documentation by @devharshthakur
@@ -131,10 +148,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial commit by @devharshthakur
 
 ### Removed
+
 - Remove redundant tabWidth from prettier config by @devharshthakur
 
 ### New Contributors
-* @devharshthakur made their first contribution
+
+- @devharshthakur made their first contribution
 
 [1.4.0]: https://github.com/devharshthakur/typescript-express-starter/compare/v1.3.2...v1.4.0
 [1.3.2]: https://github.com/devharshthakur/typescript-express-starter/compare/v1.3.1...v1.3.2
