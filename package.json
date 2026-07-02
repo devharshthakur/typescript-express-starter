@@ -34,22 +34,22 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^26.0.0",
+    "@types/node": "^26.0.1",
     "@types/supertest": "^7.2.0",
     "@vitest/coverage-v8": "4.1.9",
     "concurrently": "^10.0.3",
-    "eslint": "^10.5.0",
+    "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.7.0",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "nodemon": "^3.1.14",
-    "prettier": "^3.8.4",
+    "prettier": "^3.9.4",
     "supertest": "^7.2.2",
     "tsdown": "^0.22.3",
     "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.0",
+    "typescript-eslint": "^8.62.1",
     "vitest": "^4.1.9"
   }
 }
