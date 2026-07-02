@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "format": "prettier --list-different --write .",
     "format:check": "prettier --list-different --check .",
-    "check": "tsc --noEmit && eslint . && prettier --list-different --check . && vitest run",
+    "check": "tsc --noEmit && eslint . && prettier --check . && vitest run",
     "docker:build": "docker compose build",
     "docker:up": "docker compose up --build",
     "docker:start": "docker compose up --build -d",
