@@ -1,6 +1,6 @@
 import express from "express";
 import routes from "$routes/routes.js";
-import { config } from "$lib/config.js";
+import { env } from "$/env.js";
 import { errorHandler } from "$middlewares/errorHandler.js";
 
 const app = express();
@@ -16,9 +16,9 @@ app.use(routes);
 app.use(errorHandler);
 
 // Start server with graceful shutdown
-const server = app.listen(config.PORT, () => {
-  console.log(`Server is running on port ${config.PORT}`);
-  console.log(`http://localhost:${config.PORT}`);
+const server = app.listen(env.PORT, () => {
+  console.log(`Server is running on port ${env.PORT}`);
+  console.log(`http://localhost:${env.PORT}`);
 });
 
 function shutdown(signal: string) {

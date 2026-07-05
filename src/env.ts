@@ -28,4 +28,4 @@ try {
   process.exit(1);
 }
 
-export const config = parsed;
+export const env = parsed;
