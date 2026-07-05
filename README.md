@@ -4,7 +4,7 @@ An Express 5 starter template using typescript with prebuilt defaults and config
 
 ## What's included
 
-- Latest version of Express
+- Latest version of Express (5)
 - Environment Variables are validated runtime, server is stoped if any of the required Environment variables is absent
 - Development server with HMR (Using Nodemon pre configured) and type checking (using `tsc`) both concurrently
 - Linting , formatting, precommit hooks all setup and extensable.

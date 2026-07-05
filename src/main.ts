@@ -1,5 +1,5 @@
 import express from "express";
-import routes from "$routes/routes.js";
+import routes from "$/routes.js";
 import { env } from "$/env.js";
 import { errorHandler } from "$middlewares/errorHandler.js";
 
