@@ -32,9 +32,9 @@
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^26.0.1",
+    "@types/node": "^26.1.1",
     "@types/supertest": "^7.2.0",
-    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/coverage-v8": "4.1.10",
     "concurrently": "^10.0.3",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
@@ -44,10 +44,10 @@
     "nodemon": "^3.1.14",
     "prettier": "^3.9.4",
     "supertest": "^7.2.2",
-    "tsdown": "^0.22.3",
-    "tsx": "^4.22.4",
+    "tsdown": "^0.22.4",
+    "tsx": "^4.23.0",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.1",
-    "vitest": "^4.1.9"
+    "typescript-eslint": "^8.63.0",
+    "vitest": "^4.1.10"
   }
 }
